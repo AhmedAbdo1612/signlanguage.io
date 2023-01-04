@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --main-color:#fff;
+    --sec-color:chocolate;
+    --bg-color:#130905;
+}
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--sec-color);
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 2px 4px rgb(186, 186, 186);
+}
+/* scroll bar */
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+.part_color {
+    color: var(--sec-color);
+}
+.header_section {
+    text-align: center;
+    padding: 3rem 0;
+}
+.header .navBar {
+    background-color:rgba(34, 34, 34, 0.146);
+    color: var(--main-color);
+    position: absolute;
+    width: 100%;
+    padding: 0.7rem 0.2rem;
+    z-index: 100;
+}
+.header .navBar .nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .navBar .logo {
+    color: var(--main-color);
+    max-width: 150px;
+    position: relative;
+}
+.header .navBar .logo .char {
+    font-family: 'Sevillana', cursive;
+}
+.header .navBar .logo .part_logo {
+    color:var(--sec-color)
+}
+.header .navBar .nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header .navBar .nav ul li {
+    margin-left: 2rem;
+}
+.header .navBar .nav ul li a {
+    color: var(--main-color);
+}
+.header .navBar .nav ul li a:hover {
+    color: var(--sec-color);
+}
+.header .navBar .nav ul li a.active {
+    color: var(--sec-color);
+}
+/*  start slider */
+.slider , .slider1{
+    background: linear-gradient(rgba(34, 34, 34, 0.648) ,rgba(34, 34, 34, 0.717)), url(../assets/People-signing.jpg) center no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .content .text {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+/* end slider */
+
+
+/* start our team */
+.team {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.team .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1.2rem;
+}
+.team .content .box {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 85%;
+    background-color: var(--main-color);
+}
+.team .content .box .team_leader {
+    position: absolute;
+    top: 25px;
+    left: -43px;
+    width: 180px;
+    text-align: center;
+    z-index: 5;
+    background-color: var(--sec-color);
+    padding: 0.3rem;
+    transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+}
+.team .content .img {
+    position: relative;
+    height: 100%;
+    
+}
+.team .content .img img {
+    width: 100%;
+    height: 100%;
+}
+.team .content .img .text_content {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    padding: 0.6rem;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+/* end our team */
+
+/* start project supervistor */
+.supervistors {
+    background-color: var(--bg-color);
+    padding: 2rem 0;
+    color: var(--main-color);
+}
+.supervistors .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.supervistors .content .box {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+.supervistors .content .box .img {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 2rem;
+}
+.supervistors .content .box .img img {
+    width: 100%;
+    height: 100%;
+}
+.supervistors .content .box .text {
+    background-color: var(--sec-color);
+    padding: 1.2rem 2rem;
+    /* width: 250px; */
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+.supervistors .content .box .text::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -23px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent var(--sec-color) transparent transparent;
+}
+/* end project supervistor */
+
+/* start footer */
+footer {
+    padding: 3rem 0;
+    background-color: var(--bg-color);
+}
+footer .content {
+    display: flex;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .content .box p {
+    color: var(--main-color);
+    text-align: center;
+    line-height: 1.6;
+    font-size: 25px;
+}
+footer .content .box img {
+    width: 100%;
+    border-radius: 10%;
+}
+/* end footer */
+
+/* section Documention text */
+.doc .text {
+    position: relative;
+}
+.doc .text::before {
+    content: "";
+    top: 30px;
+    left: -8px;
+    position: absolute;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--sec-color);
+}
+
+
+
+
+
+@media(max-width:767px) {
+    body {
+        font-size: 85%;
+    }
+    .slider .content .text {
+        font-size: 1rem;
+    }
+    .supervistors .content {
+        flex-direction: column;
+    }
+    footer .content {
+        flex-direction: column;
+    }
+    footer .content .box p {
+        font-size: 18px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .team .content {
+        grid-template-columns: repeat(auto-fit, minmax(275px,1fr));
+    }
+    .supervistors .content .box {
+        flex-direction: column;
+    }
+    .supervistors .content .box .text  {
+        margin-top: 3rem;
+    }
+    .supervistors .content .box .img {
+        width: 150px;
+        height: 150px;
+    }
+    .doc .text::before {
+        top: 25px;
+    }
+}
